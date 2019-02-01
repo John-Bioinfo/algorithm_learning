@@ -9,14 +9,25 @@ def getComb(strA):
 
     i = 0
     j = 0
-    while j < charN:
-        tmp_s[1] = strA[i]
+#    while j < charN:
+#        tmp_s[1] = strA[i]
+#        i += 1           
+#        if i == charN :             
+#            tmp_s[0] = strA[j]
+#            j += 1
+#            i = 0
+
+    OL = copy.copy(tmp_s)
+    outL.append(OL)
+    while j <= charN:
         i += 1
-           
-        if i == charN :             
-            tmp_s[0] = strA[j]
+        if i == charN:            
             j += 1
             i = 0
+            if j == charN:
+                break
+        tmp_s[0] = strA[j]
+        tmp_s[1] = strA[i]
             
         OL = copy.copy(tmp_s)
         outL.append(OL)
